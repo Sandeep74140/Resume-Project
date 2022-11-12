@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Resume</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4f29ed548e.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon"
+    href="data:image/jpeg;base64,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" />
+  <style>
+    body {
+      background-color: #cc5577;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 60'%3E%3Cg %3E%3Crect fill='%23cc5577' width='11' height='11'/%3E%3Crect fill='%23ce5776' x='10' width='11' height='11'/%3E%3Crect fill='%23d05a76' y='10' width='11' height='11'/%3E%3Crect fill='%23d15c75' x='20' width='11' height='11'/%3E%3Crect fill='%23d35f74' x='10' y='10' width='11' height='11'/%3E%3Crect fill='%23d46174' y='20' width='11' height='11'/%3E%3Crect fill='%23d66473' x='30' width='11' height='11'/%3E%3Crect fill='%23d76673' x='20' y='10' width='11' height='11'/%3E%3Crect fill='%23d96972' x='10' y='20' width='11' height='11'/%3E%3Crect fill='%23da6c72' y='30' width='11' height='11'/%3E%3Crect fill='%23db6e71' x='40' width='11' height='11'/%3E%3Crect fill='%23dc7171' x='30' y='10' width='11' height='11'/%3E%3Crect fill='%23dd7471' x='20' y='20' width='11' height='11'/%3E%3Crect fill='%23de7671' x='10' y='30' width='11' height='11'/%3E%3Crect fill='%23df7971' y='40' width='11' height='11'/%3E%3Crect fill='%23e07c71' x='50' width='11' height='11'/%3E%3Crect fill='%23e17e71' x='40' y='10' width='11' height='11'/%3E%3Crect fill='%23e28171' x='30' y='20' width='11' height='11'/%3E%3Crect fill='%23e38471' x='20' y='30' width='11' height='11'/%3E%3Crect fill='%23e38771' x='10' y='40' width='11' height='11'/%3E%3Crect fill='%23e48972' y='50' width='11' height='11'/%3E%3Crect fill='%23e58c72' x='60' width='11' height='11'/%3E%3Crect fill='%23e58f73' x='50' y='10' width='11' height='11'/%3E%3Crect fill='%23e69173' x='40' y='20' width='11' height='11'/%3E%3Crect fill='%23e69474' x='30' y='30' width='11' height='11'/%3E%3Crect fill='%23e79775' x='20' y='40' width='11' height='11'/%3E%3Crect fill='%23e79a75' x='10' y='50' width='11' height='11'/%3E%3Crect fill='%23e89c76' x='70' width='11' height='11'/%3E%3Crect fill='%23e89f77' x='60' y='10' width='11' height='11'/%3E%3Crect fill='%23e8a278' x='50' y='20' width='11' height='11'/%3E%3Crect fill='%23e9a47a' x='40' y='30' width='11' height='11'/%3E%3Crect fill='%23e9a77b' x='30' y='40' width='11' height='11'/%3E%3Crect fill='%23e9aa7c' x='20' y='50' width='11' height='11'/%3E%3Crect fill='%23e9ac7e' x='80' width='11' height='11'/%3E%3Crect fill='%23eaaf7f' x='70' y='10' width='11' height='11'/%3E%3Crect fill='%23eab281' x='60' y='20' width='11' height='11'/%3E%3Crect fill='%23eab482' x='50' y='30' width='11' height='11'/%3E%3Crect fill='%23eab784' x='40' y='40' width='11' height='11'/%3E%3Crect fill='%23eaba86' x='30' y='50' width='11' height='11'/%3E%3Crect fill='%23ebbc88' x='90' width='11' height='11'/%3E%3Crect fill='%23ebbf8a' x='80' y='10' width='11' height='11'/%3E%3Crect fill='%23ebc18c' x='70' y='20' width='11' height='11'/%3E%3Crect fill='%23ebc48e' x='60' y='30' width='11' height='11'/%3E%3Crect fill='%23ebc790' x='50' y='40' width='11' height='11'/%3E%3Crect fill='%23ebc992' x='40' y='50' width='11' height='11'/%3E%3Crect fill='%23ebcc94' x='90' y='10' width='11' height='11'/%3E%3Crect fill='%23ebce97' x='80' y='20' width='11' height='11'/%3E%3Crect fill='%23ebd199' x='70' y='30' width='11' height='11'/%3E%3Crect fill='%23ecd39c' x='60' y='40' width='11' height='11'/%3E%3Crect fill='%23ecd69e' x='50' y='50' width='11' height='11'/%3E%3Crect fill='%23ecd8a1' x='90' y='20' width='11' height='11'/%3E%3Crect fill='%23ecdba4' x='80' y='30' width='11' height='11'/%3E%3Crect fill='%23ecdda6' x='70' y='40' width='11' height='11'/%3E%3Crect fill='%23ece0a9' x='60' y='50' width='11' height='11'/%3E%3Crect fill='%23ede2ac' x='90' y='30' width='11' height='11'/%3E%3Crect fill='%23ede4af' x='80' y='40' width='11' height='11'/%3E%3Crect fill='%23ede7b2' x='70' y='50' width='11' height='11'/%3E%3Crect fill='%23ede9b5' x='90' y='40' width='11' height='11'/%3E%3Crect fill='%23eeecb8' x='80' y='50' width='11' height='11'/%3E%3Crect fill='%23EEB' x='90' y='50' width='11' height='11'/%3E%3C/g%3E%3C/svg%3E");
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    img {
+      vertical-align: middle;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      margin-top: 40px;
+      border: solid;
+      border-color: pink;
+      border-width: thick;
+    }
+
+    a {
+      color: black;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    a:hover {
+      color: brown;
+    }
+
+
+    @media only screen and (max-width: 768px) {
+      .demo {
+        padding: 0.5rem 0.5rem !important;
+      }
+
+      .context {
+        margin-left: -5px !important;
+      }
+
+      .h4,
+      h4 {
+        font-size: 1.3rem !important;
+      }
+
+      .alto {
+        margin-top: -5px !important;
+      }
+
+      .work {
+        width: 100% !important;
+        padding: 10px;
+      }
+
+      .education {
+        width: 100% !important;
+        padding: 10px;
+      }
+
+      .project {
+        width: 100% !important;
+        padding: 10px;
+      }
+
+      .abc {
+        float: right;
+        margin-left: 5rem !important;
+      }
+
+      .card {
+        margin-left: 30px;
+        margin-top: 80px !important;
+      }
+
+      .map iframe {
+        margin-top: 0 !important;
+      }
+
+    }
+
+    .ict a {
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ict a span {
+      color: black;
+      font-size: 10px;
+      padding: 10px 0 10px 0;
+      display: block;
+      font-family: 'Josefin Sans';
+      letter-spacing: 1px;
+      font-weight: 550;
+    }
+
+    .ict i {
+      display: block;
+      margin: 0 auto 10px auto;
+      width: 32px;
+      height: 32px;
+      margin: 10px auto 0;
+      line-height: 32px;
+      text-align: center;
+      font-size: 30px;
+      margin-top: -10px;
+      padding-top: 5px;
+    }
+
+    .ict li {
+      text-align: center;
+      width: 31.9%;
+      margin-bottom: 3px !important;
+      border: 1px;
+      display: inline-block;
+      font-size: 10px;
+      padding: 0;
+    }
+
+    .ict ul {
+      margin: 0;
+      padding: 2px;
+    }
+
+    .ict {
+      margin: 0;
+      padding: 0;
+    }
+
+    .ict a:hover {
+      text-decoration: none;
+      color: brown;
+
+    }
+
+    .progress {
+      max-width: 70%;
+      margin-left: 10%;
+    }
+
+    .progress-tittle {
+      margin-left: 10%;
+    }
+
+    .progress-bar {
+      background-color: maroon;
+    }
+
+    .content {
+      padding: 10px;
+      width: 80%;
+    }
+
+    .education {
+      width: 50%;
+    }
+
+    .project {
+      width: 50%;
+    }
+
+    .image img {
+      width: 150px;
+      height: 150px;
+      border-color: black !important;
+    }
+
+    .image-info {
+      margin-left: 1.0rem;
+      padding: 0.5rem;
+    }
+
+    .abc {
+      margin-top: -1rem;
+    }
+
+    .map iframe {
+      vertical-align: middle;
+      border-radius: 20%;
+      border: solid !important;
+      border-color: black !important;
+      border-width: thick !important;
+      margin-top: 40px;
+      border-radius: 32px;
+    }
+
+    .card {
+      background-color: lightsalmon;
+      margin-top: 10px;
+      width: 80%;
+    }
+
+    .end {
+      position: absolute;
+      animation: end 5s linear 0s 3 forwards;
+    }
+
+    @keyframes end {
+      0% {
+        width: 20%;
+        background-color: red;
+      }
+
+      50% {
+        width: 50%;
+        background-color: yellow;
+      }
+
+      100% {
+        width: 100%;
+        background-color: green;
+      }
+    }
+
+    .card-body a:hover {
+      text-decoration: none;
+    }
+
+    * {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+</head>
+
+<body onload="scrollWin()">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-4 col-sm-12 text-center mt-5">
+        <br>
+        <h1 style="font-size: 40px;font-weight: 600;font-family: Verdana, Geneva, Tahoma, sans-serif;">Sandeep Sahani
+        </h1>
+        <h4>Web Developer/Designer</h4>
+
+        <img src="WhatsApp Image 2022-10-16 at 12.57.47.jpg" alt="Sorry!(.jpg not found)">
+      </div>
+      <div class="col-lg-8 col-sm-6 mt-5 alto">
+        <br>
+        <br>
+        <br>
+        <ul class="nav">
+          <li class="nav-item">
+            <a style="color:brown;" class="nav-link active demo" href="#aboutme">
+              <h4>About me</h4>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link demo" href="#resume">
+              <h4>Resume</h4>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link demo" href="#projects">
+              <h4>Projects</h4>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link demo" href="#contact">
+              <h4>Contact</h4>
+            </a>
+          </li>
+        </ul>
+        <div class="context" style="margin-left: 100px;">
+          <h1
+            style="font-size: 80px;font-weight: 600;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+            Hello,</h1>
+          <div style="font-size: 15px;font-family: Verdana, Geneva, Tahoma, sans-serif;width: 90%;">
+            <p>I grew up in Maharajganj, Uttar Pradesh where I also finished my elementary school as a kid. I would
+              spend most of my time in playing outdoor games, exploring computer games. I won many prizes for academic
+              excellence and cultural programs during my education.
+            <div style="margin-top: -0.8rem;">
+              During College days, I spent most of my time in learning new technologies in Computer Science, worked as a
+              freelancer providing technical solutions to business. I achieved many prizes in cultural, technical or
+              sports events.
+            </div>
+
+            </p>
+          </div>
+
+
+          <h4>Hobbies and Interests :</h4>
+          <br>
+
+          <ul class="ict">
+            <li><a href="#outdoors"><i class="fas fa-motorcycle fa-3x"></i><span>Outdoors</span></a></li>
+            <li><a href="#technology"><i class="fas fa-laptop fa-3x"></i><span>Technology</span></a></li>
+            <li><a href="#guitar"><i class="fas fa-guitar fa-3x"></i><span>Guitar</span></a></li>
+            <li><a href="#movies"><i class="fas fa-film fa-3x"></i><span>Movies</span></a></li>
+            <li><a href="#travel"><i class="fas fa-plane fa-3x"></i><span>Travel</span></a></li>
+            <li><a href="#sports"><i class="fas fa-running fa-3x"></i><span>Sports</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+    <span><i style="margin-right: 20px;" class="fas fa-cogs fa-3x"></i><i
+        style="font-size: 35px;font-weight: 500;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Skills
+        :</i></span>
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <div class="progress-wrapper">
+          <span>
+            <div class="progress-tittle">
+              JavaScript
+            </div>
+          </span>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:40%">
+              <span>
+                <div class="progress-percentage">40%</div>
+              </span>
+            </div>
+          </div>
+          <br>
+          <span>
+            <div class="progress-tittle">
+              CSS
+            </div>
+          </span>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%">
+              <span>
+                <div class="progress-percentage">80%</div>
+              </span>
+            </div>
+          </div>
+          <br>
+          <span>
+            <div class="progress-tittle">
+              Bootstrap
+            </div>
+          </span>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:70%">
+              <span>
+                <div class="progress-percentage">70%</div>
+              </span>
+            </div>
+          </div>
+          <br>
+          <span>
+            <div class="progress-tittle">
+              HTML
+            </div>
+          </span>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:90%">
+              <span>
+                <div class="progress-percentage">90%</div>
+              </span>
+            </div>
+          </div>
+          <br>
+          <span>
+            <div class="progress-tittle">
+              React
+            </div>
+          </span>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:50%">
+              <span>
+                <div class="progress-percentage">50%</div>
+              </span>
+            </div>
+            <br>
+          </div>
+          <br>
+        </div>
+        <br>
+      </div>
+      <div class="work">
+        <span><i style="margin-right: 20px;" class="fas fa-code fa-3x"></i><i
+            style="font-size: 30px;font-weight: 500;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Work
+            Experience :</i></span>
+        <br>
+        <div class="content">
+          <small>March 2020</small>
+          <br>
+          <b>Information Technology:</b>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aliquam corporis facilis obcaecati?
+            Voluptatem magni enim qui reiciendis, eligendi ipsum earum esse cum recusandae ad temporibus labore amet?
+            Voluptatum, corporis.</p>
+          <b>Mechanical Engineering:</b>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente minus vel nostrum earum minima
+            laudantium eum, omnis odio qui, corporis, illo repellat dolor reprehenderit tempora molestias cum error
+            culpa fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit, tempora debitis facere enim eveniet
+            quia? Sapiente.</p>
+          <hr size="100">
+          <small>June 2019</small>
+          <br>
+          <b>Web developer:</b>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aliquam corporis facilis obcaecati?
+            Voluptatem magni enim qui reiciendis, eligendi ipsum earum esse cum recusandae ad temporibus labore amet?
+            Voluptatum, corporis.</p>
+          <b>Bootstrap:</b>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente minus vel nostrum earum minima
+            laudantium eum, omnis odio qui, corporis, illo repellat dolor reprehenderit tempora molestias cum error
+            culpa fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit, tempora debitis facere enim eveniet
+            quia? Sapiente.</p>
+        </div>
+      </div>
+      <div class="education">
+        <br>
+        <span><i style="margin-right: 20px;" class="fas fa-book fa-3x"></i><i
+            style="font-size: 30px;font-weight: 500;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Education
+            :</i></span>
+        <br>
+        <div class="content">
+          <small>2018-2022</small>
+          <br>
+          <b>BACHELOR OF ENGINEERING (B.Tech/B.E)</b>
+          <h6>Mechanical Engineering (5.3 OGPA)</h6>
+          <p>Collage of Technology and Engineering, Udaipur, Rajasthan</p>
+          <hr>
+          <small>2016-2017</small>
+          <br>
+          <b>SENIOR SECONDARY EDUCATION (12th)</b>
+          <h6>MC Inter College, Kushi Nagar Uttar Pradesh</h6>
+          <p>81.2 % (percentage)</p>
+          <hr>
+          <small>2014-2015</small>
+          <br>
+          <b>SECONDARY EDUCATION (10th)</b>
+          <h6>Oxford Public School, Gorakhpur (Uttar Pradesh)</h6>
+          <p>(9.2 OGPA</p>
+          <hr>
+        </div>
+      </div>
+      <div id="projects" class="project">
+        <br>
+        <span><i style="margin-right: 20px;" class="fas fa-user-secret fa-3x"></i><i
+            style="font-size: 30px;font-weight: 500;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Projects/Portfolio
+            :</i></span>
+        <div class="row abc">
+          <div class="col-lg-6 col-sm-12">
+            <div class="image">
+
+              <img src="slide.jpg.jpg" alt=".jpg">
+              <div class="image-info">
+                <b>Android App</b>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <div class="image">
+              <img src="https://miro.medium.com/max/3960/0*HICLyAdNSIyT0ODU.jpg" alt=".jpg">
+              <div class="image-info">
+                <b>Website Design</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row abc">
+          <div class="col-lg-6 col-sm-6">
+            <div class="image">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRj0c8sbramz2qZVvQS8aS9jjO-fRL-pE2Kr-1jOfybVO-DilWS&usqp=CAU"
+                alt=".jpg">
+              <div class="image-info">
+                <b>AI based Robo</b>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <div class="image">
+              <img src="https://images.collegexpress.com/blog/guide-to-college-freelancing.jpg" alt=".jpg">
+              <div class="image-info">
+                <b>Freelancing</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div id="contact" class="contact">
+      <span><i style="margin-right: 20px;" class="fas fa-envelope fa-3x"></i><i
+          style="font-size: 30px;font-weight: 500;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Contact
+          :</i></span>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <br>
+          <span><i style="margin-right: 5px;" class="fas fa-map-marker-alt fa-1x"></i><i
+              style="font-size: 20px;font-weight: 500;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Address:</i></span>
+          <p>725 Keshavpura, Kota,
+            <br> Rajasthan
+            - 324005
+          </p>
+
+          <span><i style="margin-right: 5px;" class="fas fa-phone-square fa-1x"></i><i
+              style="font-size: 20px;font-weight: 500;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Mobile
+              Number:</i></span>
+          <p>
+            (+91)-9928752962
+          </p>
+
+          <span><i style="margin-right: 5px;" class="fas fa-envelope fa-1x"></i><i
+              style="font-size: 20px;font-weight: 500;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Email:</i></span>
+          <p>
+            Sandeepsahani1411999@gmail.com
+          </p>
+        </div>
+        <div><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.788726226035!2d75.83257581498752!3d25.142832696197637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f85c1730651f7%3A0x64fc2c020fce2f77!2sKeshavpura!5e0!3m2!1sen!2sin!4v1666419667251!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="col-lg-6 col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <h3 style="text-align: center;">Get in Touch!</h3>
+              <br>
+              <input style="width: 100%;" class="form-control name" type="text" placeholder="Enter your name">
+              <br>
+              <input style="width: 100%;" class="form-control email" type="email" placeholder="Enter your email">
+              <br>
+              <textarea style="width: 100%;" name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+              <br>
+
+              <button style="background-color: lightpink;margin-left: 40%;" type="submit"> <a href="#submit">Submit</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div>
+  </div>
+  <b class="animation end" style="text-align: center;">*** Thanks for Visiting! ***</b>
+
+  <script>
+    function scrollWin() {
+      window.scrollTo(0, 0);
+    }
+
+  </script>
+
+</body>
+
+</html>
